@@ -1,0 +1,8 @@
+:: change current command prompt window title
+title my-cmd-console
+
+:: minimize all open windows on the desktop with powershell command
+powershell -command "& { $x = New-Object -ComObject Shell.Application; $x.minimizeall()  }"
+
+:: bring console back to the front with nircmd.exe command 'win activate [filter window by title]' 
+nircmd.exe win activate title "my-cmd-console" 
